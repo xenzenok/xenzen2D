@@ -1,19 +1,16 @@
 extends CharacterBody2D
 
 var speed = 200
-var jump_force = -400
-var gravity = 900
 
 func _physics_process(delta):
-	# Horizontal movement
-	var input_dir = Input.get_axis("ui_left", "ui_right")
-	velocity.x = input_dir * speed
+	var input_vector = Vector2.ZERO
+	input_vector.x = Input.get_axis("ui_left", "ui_right")
+	input_vector.y = Input.get_axis("ui_up", "ui_down")
 
-	# Vertical movement
-	if is_on_floor():
-		if Input.is_action_just_pressed("ui_up"):
-			velocity.y = jump_force
+	if input_vector != Vector2.ZERO:
+		input_vector = input_vector.normalized()
+		velocity = input_vector * speed
 	else:
-		velocity.y += gravity * delta
+		velocity = Vector2.ZERO
 
 	move_and_slide()
