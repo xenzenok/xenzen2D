@@ -1,0 +1,24 @@
+# Godot
+.import/
+.export/
+*.import
+*.cfg
+*.tmp
+*.log
+*.mono/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VSCode
+.vscode/
+
+# Builds
+build/
+exports/
+*.exe
+*.zip
+
+# Ignore local secrets
+.env
