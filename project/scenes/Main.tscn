@@ -92,6 +92,7 @@ horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="BGMUSIC" type="AudioStreamPlayer2D" parent="." unique_id=1968929812]
+position = Vector2(495, 123)
 stream = ExtResource("12_bjd11")
 volume_db = 2.0
 autoplay = true
