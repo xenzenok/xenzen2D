@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://pmq0m57sm82y" path="res://assets/path.png" id="6_wp0k4"]
 [ext_resource type="PackedScene" uid="uid://c0uc0fxe1ex6t" path="res://scenes/npc3.tscn" id="7_jlsqs"]
 [ext_resource type="PackedScene" uid="uid://cbdfnaiakb7fh" path="res://scenes/npc4.tscn" id="8_q8u5g"]
+[ext_resource type="AudioStream" uid="uid://onjvla4rcxtr" path="res://assets/audio/bg.mp3" id="12_bjd11"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c01mt"]
 texture = ExtResource("1_0bbpv")
@@ -89,3 +90,10 @@ Prison
 "
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
+
+[node name="BGMUSIC" type="AudioStreamPlayer2D" parent="." unique_id=1968929812]
+stream = ExtResource("12_bjd11")
+volume_db = 2.0
+autoplay = true
+max_distance = 4096.0
+attenuation = 0.5176324

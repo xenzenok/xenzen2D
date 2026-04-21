@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpd6dsisdiuiy" path="res://assets/grass.png" id="1_24ius"]
 [ext_resource type="Script" uid="uid://cqr2ni2ymh0qg" path="res://scripts/timer2.gd" id="1_gq6tj"]
 [ext_resource type="PackedScene" uid="uid://bi3w32tqedder" path="res://scenes/player.tscn" id="2_gq6tj"]
+[ext_resource type="AudioStream" uid="uid://cumq0m20mhdwj" path="res://assets/audio/victory.mp3" id="4_npi8v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npi8v"]
 size = Vector2(1036, 152.5)
@@ -25,7 +26,7 @@ texture = ExtResource("1_24ius")
 position = Vector2(-1, -32)
 
 [node name="Timer" type="Timer" parent="." unique_id=407200887]
-wait_time = 5.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 
@@ -38,5 +39,10 @@ bbcode_enabled = true
 text = "YOU ARE THE WINNEERRRR"
 text_direction = 2
 language = "Japeneseyooo"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=29941337]
+position = Vector2(1, -15)
+stream = ExtResource("4_npi8v")
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
