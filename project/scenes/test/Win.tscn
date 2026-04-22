@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://d15hcrwmqtg7r"]
+
+[ext_resource type="Script" uid="uid://cqr2ni2ymh0qg" path="res://scripts/timer2.gd" id="1_gq6tj"]
+[ext_resource type="PackedScene" uid="uid://bi3w32tqedder" path="res://scenes/player.tscn" id="2_gq6tj"]
+[ext_resource type="Texture2D" uid="uid://b2lg35bwgsubv" path="res://assets/wall.png" id="2_ob58s"]
+[ext_resource type="AudioStream" uid="uid://cumq0m20mhdwj" path="res://assets/audio/victory.mp3" id="4_npi8v"]
+[ext_resource type="Script" uid="uid://cbygh8ewbxsmg" path="res://scripts/battle_npc.gd" id="4_ob58s"]
+[ext_resource type="Texture2D" uid="uid://dc57vbmo8wdiv" path="res://assets/victorybg.png" id="6_raq4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npi8v"]
+size = Vector2(1599.5, 73)
+
+[node name="Win" type="Node2D" unique_id=504204049]
+script = ExtResource("1_gq6tj")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1818278612]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=297463429]
+position = Vector2(73, 538)
+shape = SubResource("RectangleShape2D_npi8v")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=73785602]
+position = Vector2(154.99988, 532)
+scale = Vector2(28.421871, 2.6328065)
+texture = ExtResource("2_ob58s")
+
+[node name="CharacterBody2D" parent="." unique_id=531261947 instance=ExtResource("2_gq6tj")]
+position = Vector2(500, 295)
+script = ExtResource("4_ob58s")
+
+[node name="Timer" type="Timer" parent="." unique_id=407200887]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1321326085]
+offset_left = 64.0
+offset_top = 277.0
+offset_right = 179.0
+offset_bottom = 381.0
+bbcode_enabled = true
+text = "YOU ARE THE WINNEERRRR"
+text_direction = 2
+language = "Japeneseyooo"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=29941337]
+position = Vector2(1, -15)
+stream = ExtResource("4_npi8v")
+autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=585629318]
+show_behind_parent = true
+position = Vector2(1450.75, 120)
+scale = Vector2(9.208075, 4.152738)
+texture = ExtResource("6_raq4n")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
