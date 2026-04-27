@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://clkhkrj0t5i6c"]
+
+[ext_resource type="Texture2D" uid="uid://cl8tu4ujchw8v" path="res://assets/sprites/npc/officer1.png" id="1_nx5am"]
+[ext_resource type="Texture2D" uid="uid://blxof2vi32wot" path="res://assets/sprites/npc/officer2.png" id="2_3gfvk"]
+[ext_resource type="Script" uid="uid://cdiucq60t0op7" path="res://scripts/test/talking.gd" id="3_3gfvk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ayvgd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_nx5am")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3gfvk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gfvk"]
+size = Vector2(32, 65)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1334275383]
+script = ExtResource("3_3gfvk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1072324653]
+sprite_frames = SubResource("SpriteFrames_ayvgd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2102450277]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_3gfvk")

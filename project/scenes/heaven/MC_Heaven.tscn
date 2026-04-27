@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://ma6y2s5h57r4"]
+
+[ext_resource type="Script" uid="uid://cxbdqi3wcgrop" path="res://scripts/core/mc.gd" id="1_0g7g5"]
+[ext_resource type="Texture2D" uid="uid://qo3wa4rotev8" path="res://assets/sprites/player/heaven/angelman1.png" id="1_dmwn4"]
+[ext_resource type="Texture2D" uid="uid://dsbu2dkkjcxeq" path="res://assets/sprites/player/heaven/angelman10.png" id="2_0g7g5"]
+[ext_resource type="Texture2D" uid="uid://csljs7t52io6e" path="res://assets/sprites/player/heaven/angelman8.png" id="3_ejo1o"]
+[ext_resource type="Texture2D" uid="uid://ctre55wkeigge" path="res://assets/sprites/player/heaven/angelman4.png" id="4_2fj2c"]
+[ext_resource type="Texture2D" uid="uid://bn5maqpcraewm" path="res://assets/sprites/player/heaven/angelman2.png" id="5_1arhu"]
+[ext_resource type="Texture2D" uid="uid://hyl5pepbap6e" path="res://assets/sprites/player/heaven/angelman3.png" id="6_yyevg"]
+[ext_resource type="Texture2D" uid="uid://dlnnbx21n1sy4" path="res://assets/sprites/player/heaven/angelman9.png" id="7_k0mo5"]
+[ext_resource type="Texture2D" uid="uid://5pd4kgqvnxax" path="res://assets/sprites/player/heaven/angelman7.png" id="8_qnone"]
+[ext_resource type="Texture2D" uid="uid://bknqgtx2ktbgb" path="res://assets/sprites/player/heaven/angelman5.png" id="9_bu1d5"]
+[ext_resource type="Texture2D" uid="uid://bjtytlgyyd5tm" path="res://assets/sprites/player/heaven/angelman6.png" id="10_1qwnf"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcy3b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dmwn4")
+}],
+"loop": true,
+"name": &"standstilldown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0g7g5")
+}],
+"loop": true,
+"name": &"standstilleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ejo1o")
+}],
+"loop": true,
+"name": &"standstillright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_2fj2c")
+}],
+"loop": true,
+"name": &"standstillup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_1arhu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_yyevg")
+}],
+"loop": true,
+"name": &"walkdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k0mo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0g7g5")
+}],
+"loop": true,
+"name": &"walkleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qnone")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ejo1o")
+}],
+"loop": true,
+"name": &"walkright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_bu1d5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1qwnf")
+}],
+"loop": true,
+"name": &"walkup",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejo1o"]
+size = Vector2(40, 38)
+
+[node name="McHeaven" type="CharacterBody2D" unique_id=699867254]
+script = ExtResource("1_0g7g5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=323022458]
+sprite_frames = SubResource("SpriteFrames_bcy3b")
+animation = &"walkup"
+frame_progress = 0.84707654
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2071159036]
+position = Vector2(0, 14)
+shape = SubResource("RectangleShape2D_ejo1o")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=86422551]
+zoom = Vector2(1.8, 1.8)

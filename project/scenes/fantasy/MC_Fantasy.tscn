@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://bbw05oylc1ml1"]
+
+[ext_resource type="Script" uid="uid://cxbdqi3wcgrop" path="res://scripts/core/mc.gd" id="1_csipc"]
+[ext_resource type="Texture2D" uid="uid://btpqy6lvjkwg6" path="res://assets/sprites/player/fantasy/mc_walks1.png" id="1_t1243"]
+[ext_resource type="Texture2D" uid="uid://drxnsh0fi6own" path="res://assets/sprites/player/fantasy/mc_walks8.png" id="2_csipc"]
+[ext_resource type="Texture2D" uid="uid://cpd4cv2bdeeef" path="res://assets/sprites/player/fantasy/mc_walks9.png" id="3_3mj1g"]
+[ext_resource type="Texture2D" uid="uid://dodwpyo8sgkks" path="res://assets/sprites/player/fantasy/mc_walks4.png" id="4_5jptm"]
+[ext_resource type="Texture2D" uid="uid://b4bejxs375glw" path="res://assets/sprites/player/fantasy/mc_walks2.png" id="5_4h0aq"]
+[ext_resource type="Texture2D" uid="uid://cic7kai3tiisk" path="res://assets/sprites/player/fantasy/mc_walks3.png" id="6_5maxf"]
+[ext_resource type="Texture2D" uid="uid://dfdvbs8oiqr2e" path="res://assets/sprites/player/fantasy/mc_walks10.png" id="7_jrfat"]
+[ext_resource type="Texture2D" uid="uid://drqqar05tikl2" path="res://assets/sprites/player/fantasy/mc_walks7.png" id="8_bi7th"]
+[ext_resource type="Texture2D" uid="uid://deks0w7m2g657" path="res://assets/sprites/player/fantasy/mc_walks5.png" id="9_imott"]
+[ext_resource type="Texture2D" uid="uid://bsw7v8fr3eswt" path="res://assets/sprites/player/fantasy/mc_walks6.png" id="10_3t1ug"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vn0py"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_t1243")
+}],
+"loop": true,
+"name": &"standstilldown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_csipc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3mj1g")
+}],
+"loop": true,
+"name": &"standstillleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_csipc")
+}],
+"loop": true,
+"name": &"standstillright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_5jptm")
+}],
+"loop": true,
+"name": &"standstillup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_4h0aq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5maxf")
+}],
+"loop": true,
+"name": &"walkdown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3mj1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jrfat")
+}],
+"loop": true,
+"name": &"walkleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_bi7th")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_csipc")
+}],
+"loop": true,
+"name": &"walkright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_imott")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3t1ug")
+}],
+"loop": true,
+"name": &"walkup",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sjouv"]
+size = Vector2(39, 34)
+
+[node name="McFantasy" type="CharacterBody2D" unique_id=980412221 groups=["player"]]
+script = ExtResource("1_csipc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1824075657 groups=["player"]]
+sprite_frames = SubResource("SpriteFrames_vn0py")
+animation = &"standstilldown"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1894772082]
+position = Vector2(0.5, 15)
+shape = SubResource("RectangleShape2D_sjouv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=716528122]
+zoom = Vector2(1.5, 1.5)

@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://dp0cufa2mgxuy" path="res://assets/tiles/heaven_cloudboundary.png" id="2_drp1q"]
 [ext_resource type="Texture2D" uid="uid://dil5sk4vp41kd" path="res://assets/tiles/heaven_water.png" id="3_rhp6m"]
 [ext_resource type="Texture2D" uid="uid://c6xbcu0yb5p0h" path="res://assets/tiles/heaven_ground.png" id="4_dv21h"]
-[ext_resource type="PackedScene" uid="uid://bi3w32tqedder" path="res://scenes/test/player.tscn" id="5_drp1q"]
-[ext_resource type="Texture2D" uid="uid://bhpbp2fhkl0fu" path="res://assets/tiles/tree.png" id="5_rhp6m"]
+[ext_resource type="Texture2D" uid="uid://18g4j5rfqd3r" path="res://assets/tiles/tree.png" id="5_rhp6m"]
+[ext_resource type="PackedScene" uid="uid://ma6y2s5h57r4" path="res://scenes/heaven/MC_Heaven.tscn" id="6_rhp6m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rhp6m"]
 texture = ExtResource("1_e2146")
@@ -82,4 +82,5 @@ text = "Colosseum
 "
 horizontal_alignment = 1
 
-[node name="CharacterBody2D" parent="." unique_id=531261947 instance=ExtResource("5_drp1q")]
+[node name="McHeaven" parent="." unique_id=699867254 instance=ExtResource("6_rhp6m")]
+position = Vector2(0, 424)

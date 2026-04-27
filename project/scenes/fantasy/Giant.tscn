@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c8h0ejatuv28a"]
+
+[ext_resource type="Texture2D" uid="uid://csssmd1kh1mhs" path="res://assets/sprites/npc/fantasy_guard.png" id="1_0gntn"]
+[ext_resource type="Script" uid="uid://cdiucq60t0op7" path="res://scripts/test/talking.gd" id="1_6sqr1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6sqr1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0gntn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny5nt"]
+size = Vector2(93, 85)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfqs1"]
+radius = 37.01351
+
+[node name="Giant" type="CharacterBody2D" unique_id=125514]
+script = ExtResource("1_6sqr1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=601428898]
+sprite_frames = SubResource("SpriteFrames_6sqr1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418125651]
+position = Vector2(0.5, 22.5)
+shape = SubResource("RectangleShape2D_ny5nt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=319331647]
+position = Vector2(1, -32)
+shape = SubResource("CircleShape2D_tfqs1")
