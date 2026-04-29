@@ -24,13 +24,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_csipc")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_3mj1g")
 }],
 "loop": true,
-"name": &"standstillleft",
+"name": &"standstilleft",
 "speed": 5.0
 }, {
 "frames": [{
@@ -98,11 +95,12 @@ animations = [{
 size = Vector2(39, 34)
 
 [node name="McFantasy" type="CharacterBody2D" unique_id=980412221 groups=["player"]]
+slide_on_ceiling = false
 script = ExtResource("1_csipc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1824075657 groups=["player"]]
 sprite_frames = SubResource("SpriteFrames_vn0py")
-animation = &"standstilldown"
+animation = &"standstilleft"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1894772082]
 position = Vector2(0.5, 15)

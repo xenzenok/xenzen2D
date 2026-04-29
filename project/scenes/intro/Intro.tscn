@@ -45,6 +45,9 @@ z_index = 1
 position = Vector2(98, -242)
 script = ExtResource("4_1urlk")
 
+[node name="Camera2D" type="Camera2D" parent="Mc" unique_id=1828940378]
+zoom = Vector2(2, 2)
+
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1371252848]
 z_index = 1
 position = Vector2(397, 2006.5314)

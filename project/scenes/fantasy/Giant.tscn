@@ -15,10 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ny5nt"]
-size = Vector2(93, 85)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_tfqs1"]
-radius = 37.01351
+size = Vector2(93, 65)
 
 [node name="Giant" type="CharacterBody2D" unique_id=125514]
 script = ExtResource("1_6sqr1")
@@ -27,9 +24,5 @@ script = ExtResource("1_6sqr1")
 sprite_frames = SubResource("SpriteFrames_6sqr1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418125651]
-position = Vector2(0.5, 22.5)
+position = Vector2(2.5, 32.5)
 shape = SubResource("RectangleShape2D_ny5nt")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=319331647]
-position = Vector2(1, -32)
-shape = SubResource("CircleShape2D_tfqs1")

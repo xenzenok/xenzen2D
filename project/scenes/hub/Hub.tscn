@@ -44,8 +44,8 @@ sources/2 = SubResource("TileSetAtlasSource_3eo6u")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mo1wo"]
 size = Vector2(40, 63)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eo6u"]
-size = Vector2(117, 72.25)
+[sub_resource type="CircleShape2D" id="CircleShape2D_y54b8"]
+radius = 86.88075
 
 [sub_resource type="LabelSettings" id="LabelSettings_le482"]
 font_color = Color(0, 0, 0, 0.9882353)
@@ -59,12 +59,15 @@ tile_set = SubResource("TileSet_w7jgr")
 
 [node name="Mc" parent="." unique_id=1683038841 instance=ExtResource("3_w7jgr")]
 z_index = 1
-position = Vector2(-8, 78)
+position = Vector2(-5, 323)
 collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Mc" unique_id=91353222 groups=["player"]]
-position = Vector2(0, 0.5)
+position = Vector2(-1, 0)
 shape = SubResource("RectangleShape2D_mo1wo")
+
+[node name="Camera2D2" type="Camera2D" parent="Mc" unique_id=962856842]
+zoom = Vector2(2, 2)
 
 [node name="Screen" type="Area2D" parent="." unique_id=1708900928]
 position = Vector2(1, -103)
@@ -73,7 +76,7 @@ script = ExtResource("6_y54b8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Screen" unique_id=377301964]
 position = Vector2(1.5, -34.125)
-shape = SubResource("RectangleShape2D_3eo6u")
+shape = SubResource("CircleShape2D_y54b8")
 debug_color = Color(0.63257545, 0.5266779, 0.13184282, 0.41960785)
 
 [node name="Sprite2D" type="Sprite2D" parent="Screen" unique_id=1390429056]

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="xenzen2D"
-run/main_scene="uid://c55v85r7qylgw"
+run/main_scene="uid://dcs0hqg7jqk0g"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -31,6 +31,7 @@ mp3={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"

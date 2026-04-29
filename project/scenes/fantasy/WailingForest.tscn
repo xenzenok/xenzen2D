@@ -5,7 +5,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k70wr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ql5mq"]
-size = Vector2(122, 124)
+size = Vector2(81, 105)
 
 [node name="WailingForest" type="Node2D" unique_id=463647541]
 
@@ -18,5 +18,5 @@ texture = ExtResource("1_k70wr")
 physics_material_override = SubResource("PhysicsMaterial_k70wr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1405321096]
-position = Vector2(0, 52)
+position = Vector2(5.5, 61.5)
 shape = SubResource("RectangleShape2D_ql5mq")

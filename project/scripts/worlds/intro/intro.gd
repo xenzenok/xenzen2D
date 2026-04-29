@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var anim = $AnimatedSprite2D
 
 var speed = 250
-var jump_force = -500
+var jump_force = -300
 var gravity = 1200
 var falling = false
 var fall_timer = 0.0
@@ -28,9 +28,9 @@ func _physics_process(delta):
 		move_and_slide()
 
 		# Play falling animation (replace with "fall" if you have one)
-		anim.play("standstilldown")
+		anim.play("falling")
 
 		# Track fall duration
 		fall_timer += delta
-		if fall_timer >= 3.0:
+		if fall_timer >= 2.2:
 			get_tree().change_scene_to_file("res://scenes/hub/Hub.tscn")

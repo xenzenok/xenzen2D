@@ -97,3 +97,6 @@ max_distance = 4096.0
 attenuation = 0.5176324
 
 [node name="Mc" parent="." unique_id=1683038841 instance=ExtResource("12_cdnlt")]
+
+[node name="Camera2D" type="Camera2D" parent="Mc" unique_id=1677483556]
+zoom = Vector2(2, 2)
